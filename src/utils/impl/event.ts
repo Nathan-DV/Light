@@ -4,7 +4,7 @@ import { Client } from 'discord.js'
 export const event = <T extends EventKeys>(id: T, exec: EventExec<T>): Event<T> => {
     return {
         id,
-        exec
+        exec,
     }
 }
 

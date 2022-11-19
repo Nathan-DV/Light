@@ -1,5 +1,5 @@
 import { Event } from '../types'
-import ready from './ready'
+import ready from './client/ready'
 
 const events: Event<any>[] = [
     ready

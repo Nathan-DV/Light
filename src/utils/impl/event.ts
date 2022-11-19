@@ -13,7 +13,7 @@ export const registerEvents = (client: Client, events: Event<any>[]): void =>  {
         client.on(event.id, async (...args) => {
             const props = {
                 client,
-                log: (...args: unknown[]) => console.log(`${event.id}`, ...args)
+                log: (...args: unknown[]) => console.log(`[${event.id[0].toUpperCase() + event.id.substring(1)} Event]`, ...args)
             }
 
             try {

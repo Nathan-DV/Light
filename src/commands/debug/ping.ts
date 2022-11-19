@@ -10,7 +10,8 @@ export default command(meta, ({ interaction }) => {
         ephemeral: false,
         embeds: [{
             title: ":ping_pong: Pong!",
-            description: `WS: ${Math.round(interaction.client.ws.ping)} MS`
+            description: `WS: ${Math.round(interaction.client.ws.ping)} MS`,
+            color: 0x51AEFF
         }]
     })
 })

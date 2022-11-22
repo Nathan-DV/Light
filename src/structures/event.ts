@@ -1,4 +1,4 @@
-import { Event, EventExec, EventKeys } from '../../types'
+import { Event, EventExec, EventKeys } from '../types/events'
 import { Client } from 'discord.js'
 
 export const event = <T extends EventKeys>(id: T, exec: EventExec<T>): Event<T> => {

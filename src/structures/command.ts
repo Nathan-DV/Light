@@ -3,7 +3,7 @@ import {
     CommandCategory, 
     CommandExec, 
     CommandMeta 
-} from '../../types'
+} from '../types/commands'
 
 export const command = (meta: CommandMeta, exec: CommandExec): Command => {
     return {

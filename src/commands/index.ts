@@ -1,5 +1,5 @@
-import debug from "./debug";
+import { CommandCategory } from "../types";
 
-export default [
-    debug
-]
+const commandCategories: CommandCategory[] = [];
+
+export default commandCategories;

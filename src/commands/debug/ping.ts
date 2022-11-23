@@ -5,7 +5,7 @@ const meta = new SlashCommandBuilder()
     .setName('ping')
     .setDescription('Check the bots uptime!')
 
-export default command(meta, ({ interaction }) => {
+export default command(meta, { name: "" }, ({ interaction }) => {
     return interaction.reply({
         ephemeral: false,
         embeds: [{

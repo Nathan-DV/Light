@@ -5,16 +5,10 @@ import {
     CommandMeta 
 } from '../types/commands'
 
-export const command = (meta: CommandMeta, exec: CommandExec): Command => {
+export const command = (meta: CommandMeta, category: CommandCategory, exec: CommandExec): Command => {
     return {
         meta,
+        category,
         exec,
-    }
-}
-
-export const category = (name: string, commands: Command[]): CommandCategory => {
-    return {
-        name,
-        commands,
     }
 }

@@ -1,9 +1,10 @@
-import { ClientEvents, Awaitable, Client } from "discord.js";
+import { ClientEvents, Awaitable } from "discord.js";
+import ExtendedClient from "../structures/client";
 
 type LoggerFunction = (...args: unknown[]) => void
 
 export interface EventProps {
-    client: Client
+    client: ExtendedClient
     log: LoggerFunction
 }
 

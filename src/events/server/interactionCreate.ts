@@ -1,11 +1,5 @@
-import commands from "../../commands";
-import { Command } from "../../types";
-import { EditReply, event, Reply } from "../../utils";
-
-const allCommands = commands.map(({ commands }) => commands).flat()
-const allCommandsMap = new Map<string, Command>(
-    allCommands.map((c) => [c.meta.name, c])
-)
+import { event } from '../../structures/event'
+import { EditReply, Reply } from '../../structures/replies'
 
 export default event('interactionCreate', async (
     {
@@ -17,9 +11,9 @@ export default event('interactionCreate', async (
     if (!interaction.isChatInputCommand()) return
 
     try {
-        const commandName = interaction.commandName
-        const command = allCommandsMap.get(commandName)
-
+        await interaction.deferReply();
+        const command = client.commands.get(interaction.commandName);
+        
         if (!command) throw new Error('Command not found ... ')
 
         await command.exec({

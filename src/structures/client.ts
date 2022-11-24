@@ -10,7 +10,7 @@ const globPromise = promisify(glob);
 
 export default class ExtendedClient extends Client {
 
-    private commands: Collection<string, Command> = new Collection();
+    commands: Collection<string, Command> = new Collection();
 
     constructor() {
         super({ intents: [ 

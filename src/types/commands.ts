@@ -20,11 +20,5 @@ export type CommandMeta =
 
 export interface Command {
     meta: CommandMeta
-    category: CommandCategory
     exec: CommandExec
-}
-
-export interface CommandCategory {
-    name: string
-    commands: Command[]
 }

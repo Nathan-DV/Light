@@ -81,7 +81,7 @@ export default class ExtendedClient extends Client {
         this.on("ready", () => {
             this.deployCommands({
                 commands: slashCommands,
-                guildId: process.env.guildId
+                guildId: process.env.TEST_GUILD
             });
         });
     }

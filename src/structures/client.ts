@@ -1,4 +1,4 @@
-import { Client } from "discord.js"
+import { ActivityType, Client, ClientUser } from "discord.js"
 
 export class ExtendedClient extends Client {
 
@@ -9,7 +9,10 @@ export class ExtendedClient extends Client {
 
     constructor() {
         super({
-            intents: 7796
+            intents: 7796,
+            presence: {
+                activities: [{ name: `Many Servers!`, type: ActivityType.Watching }],
+            }
         })
     }
 

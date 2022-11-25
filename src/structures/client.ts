@@ -52,7 +52,6 @@ export class ExtendedClient extends Client {
         commandFiles.forEach(async (filePath) => {
             const command: CommandType = await this.importFile(filePath);
             if (!command.name) return;
-            console.log(command);
 
             this.commands.set(command.name, command);
             slashCommands.push(command);

@@ -7,6 +7,7 @@ export default new Command({
         interaction.followUp({
             embeds: [{
                 title: ":ping_pong: Pong!",
+                color: 0x7ddff,
                 description: `**WS: \`${Math.round(client.ws.ping)} MS\`**`
             }]
         });
